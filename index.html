@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="nyasha_style.css">
+  <script>
+    function validateForm() {
+      if (document.forms['contact_email'].contact_name.value == ""){
+      alert("Name must be filled out");
+      return false;
+    } else if (document.forms['contact_email'].email.value == ""){
+     alert("Email must be filled out");
+     return false;
+    } else if (document.forms['contact_email'].subject.value == ""){
+      alert("Subject must be filled out");
+      return false;
+    }else {
+      alert("Thank you! Your message was recieved!");
+      return true;
+      }
+    };
+</script>
+
+</head>
+<body>
+<div class="header">
+  <h1>NYASHA JAPPIE</h1>
+  <p>CV ASSIGNMENT R191816H</p>
+</div>
+
+<div class="topnav">
+  <a href="#">Home</a>
+  <a href="#">Contact</a>
+  <a href="#">Link</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+  <!-- Academic and Professional Qualifications -->
+    <div class="card">
+      <h2>Academic and Professional Qualifications</h2>
+          <ul>
+            <li>Second year student -  BBMIT at Catholic University of Zimbabwe </li>
+            <li>LCCI Private Secretarial Diploma </li>
+            <li>Speciss Executive Secretarial Diploma </li>
+            <li>6 Ordinary Level </li>
+            <li>2 Cambridge Advanced Level</li>
+          </ul>
+    </div>
+  <!-- Working experience< -->
+    <div class="card">
+      <h2>Working experience</h2>
+      <p> Company:	Creative Computers</p>
+      <p> Position:	Administrator</p>
+      <p> Period:	August 2014 to September 2015</p>
+
+      <p><b>Key Responsibilities</b></p>
+      <ul>
+        <li>Administrative support through telephone, email and face to face communication with clients </li>
+        <li>Maintenance of client Database and formulating reports that assisted management in planningts</li>
+        <li>Client refunds reconciliation</li>
+        <li>Processing product order switches for client</li>
+        <li>Debtors Reconciliation, posting and analysis </li>
+        <li>Assisting in Accounting department-Payment and receipt capturing, petty cash, debtors and creditors reconciliation, bank reconciliation</li>
+      </ul>
+    </div>
+<!-- Contact me -->
+    <div class="card">
+      <h2>Contact me</h2>
+      <form id="contact_email" onsubmit="return validateForm(this)" action="send_email.php">
+      <div class="row">
+        <div class="col-25">
+          <label for="contact_name">Full Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="contact_name" name="contact_name" placeholder="Your name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="email">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="email" name="email" placeholder="Your email..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Subject</label>
+        </div>
+        <div class="col-75">
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+      </form>
+    </div>
+  </div>
+  <div class="rightcolumn">
+<!-- About Nyasha -->
+    <div class="card">
+      <h2>About Me</h2>
+      <img src="images/nyasha.jpg" alt="nyasha's laptop" width="200px" height="300px">
+      <div class="dark_mode">
+        <p>Energetic and passionate university student working towards a BBMIT
+          at Catholic University of Zimbabwe. Aiming to use my knowledge that I
+          have acquired from my coursework as well as self study and with my hard work to satisfy my internship at your
+          organization and also willing to learn more from this internship.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>My Skills </h3>
+      <div class="dark_mode">PHP, JAVA, Javascript, CSS</div>
+      <div class="dark_mode">SQL</div>
+      <div class="dark_mode">Computer networking</div>
+    </div>
+    <div class="card">
+      <h3>Contact Details</h3>
+      <div class="dark_mode">
+      <p>
+        Nyasha Jappie </br>
+        655 Thetford Close </br>
+        Avonlea </br>
+        Harare </br>
+      </p>
+
+      Cell: +263 (0) 774 511 218 </br>
+      Email: <a href="mailto:r191816h@cuz.ac.zw">r191816h@cuz.ac.zw</a></br>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p> +263 (0) 774 511 218 |  <a href="mailto:r191816h@cuz.ac.zw">r191816h@cuz.ac.zw</a> |   <a href="nyasha_cv.pdf" download>Download as pdf</a></p>
+</div>
+
+</body>
+</html>
